@@ -11,3 +11,13 @@
     font-family: "Inria Serif", serif;
   }
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #030012;
+  }
+}
