@@ -38,34 +38,34 @@ export const Hero = () => {
                     </div>
                 </div>
                 <div className="relative animation-menu-fade animation-delay-400">
-  <div className="w-90 h-90 max-w-md mx-auto group [perspective:1000px]">
-    
-    {/* Outer wrapper → safe for glass */}
-    <div className="glass glow-border rounded-full w-full h-full">
-      
-      {/* Inner wrapper → handles 3D rotation */}
-      <div className="relative w-full h-full rounded-full transition-transform duration-900 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        
-        {/* Front */}
-        <img
-          src="../../public/gitpinkpic.png"
-          alt="logo"
-          className="absolute w-full h-full object-cover rounded-full [backface-visibility:hidden]"
-        />
+                    <div className="w-90 h-90 max-w-md mx-auto group [perspective:1000px]">
+                        
+                        {/* Outer wrapper → safe for glass */}
+                        <div className="glass glow-border rounded-full w-full h-full">
+                        
+                            {/* Inner wrapper → handles 3D rotation */}
+                            <div className="relative w-full h-full rounded-full transition-transform duration-900 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                
+                                {/* Logo pic */}
+                                <img
+                                src="../../public/gitpinkpic.png"
+                                alt="logo"
+                                className="absolute w-full h-full object-cover rounded-full [backface-visibility:hidden]"
+                                />
 
-        {/* Back */}
-        <img
-          src="../../public/profileImg2.png"
-          alt="Salma Alaoui"
-          className="absolute w-full h-full object-cover rounded-full [transform:rotateY(180deg)] [backface-visibility:hidden]"
-        />
+                                {/* Personal pic */}
+                                <img
+                                src="../../public/profileImg2.png"
+                                alt="Salma Alaoui"
+                                className="absolute w-full h-full object-cover rounded-full [transform:rotateY(180deg)] [backface-visibility:hidden]"
+                                />
 
-      </div>
+                            </div>
 
-    </div>
+                        </div>
 
-  </div>
-</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
