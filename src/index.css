@@ -62,7 +62,13 @@
   }
 
   .glow-text {
-    text-shadow: 0 0 30px color-mix(in srgb, var(--color-border) 50%, transparent);
+    text-shadow: 0 0 30px color-mix(in srgb, var(--color-border) 90%, transparent);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 20px
+      color-mix(in srgb, var(--color-primary) 70%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
   }
 }
 
@@ -83,4 +89,42 @@
   .animation-menu-fade {
     animation: menu-fade 0.8s ease-out both;
   }
+  
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  @keyframes animated-border {
+    0% {
+      stroke-dashoffset: 40;
+    }
+    100% {
+      stroke-dashoffset: -550;
+    }
+  }
+
+  .group:hover .animated-border-path {
+    animation: animated-border 1.5s linear infinite;
+  }
+
+  .animated-border:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+
+  .group-hover:scale-105 transition-transform duration-500
+
 }

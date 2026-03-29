@@ -12,7 +12,7 @@ const navLinks = [
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <header className="fixed top-0 right-0 left-0 bg-transparent py-5">
+        <header className="fixed top-0 right-0 left-0 bg-transparent py-5 z-50">
             <nav className="container mx-auto px-6 flex items-center justify-between">
                 <a href="#">
                     <img src="/Logo.svg" className='h-13 w-13'/>
@@ -29,7 +29,7 @@ export const Navbar = () => {
                 </div>
 
                 <div className="hidden md:block">
-                    <Button size="sm">Contact Me</Button>
+                    <Button size="sm">Get In Touch</Button>
                 </div>
 
                 <button 
@@ -46,7 +46,7 @@ export const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
-                    <Button size="sm">Contact Me</Button>
+                    <Button>Get In Touch</Button>
                 </div>
             </div>)}
         </header>
