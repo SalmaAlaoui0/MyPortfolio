@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {Button} from "../components/Button";
 import { Menu , X} from "lucide-react"
 
@@ -11,8 +11,19 @@ const navLinks = [
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const  handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        }
+
+        window.addEventListener("scroll", handleScroll)
+
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, []);
     return (
-        <header className="fixed top-0 right-0 left-0 bg-transparent py-5 z-50">
+        <header className={`fixed top-0 right-0 left-0 transition-all duration-400 ${isScrolled ? "glass-mobile py-1" : "bg-transparent py-5"} z-50`}>
             <nav className="container mx-auto px-6 flex items-center justify-between">
                 <a href="#">
                     <img src="/Logo.svg" className='h-13 w-13'/>
@@ -42,11 +53,11 @@ export const Navbar = () => {
             {isMenuOpen && (<div className="md:hidden glass-mobile">
                 <div className="container mx-auto px-6 py-6 flex flex-col gap-4 animation-menu-fade">
                     {navLinks.map((link, index) => (
-                        <a key={index} href={link.href} className="text-lg text-muted-foreground hover:text-foreground py-2">
+                        <a key={index} href={link.href} onClick={() => {setIsMenuOpen(false)}} className="text-lg text-muted-foreground hover:text-foreground py-2">
                             {link.label}
                         </a>
                     ))}
-                    <Button>Get In Touch</Button>
+                    <Button onClick={() => {setIsMenuOpen(false)}}>Get In Touch</Button>
                 </div>
             </div>)}
         </header>
