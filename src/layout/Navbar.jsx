@@ -1,5 +1,6 @@
+import { useState } from "react";
 import {Button} from "../components/Button";
-import { Menu } from "lucide-react"
+import { Menu , X} from "lucide-react"
 
 const navLinks = [
     { href: "#about", label: "About" },
@@ -9,6 +10,7 @@ const navLinks = [
 ];
 
 export const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <header className="fixed top-0 right-0 left-0 bg-transparent py-5">
             <nav className="container mx-auto px-6 flex items-center justify-between">
@@ -30,11 +32,23 @@ export const Navbar = () => {
                     <Button size="sm">Contact Me</Button>
                 </div>
 
-                <button className="md:hidden p-2 text-foreground">
-                    <Menu />
+                <button 
+                    onClick={() => setIsMenuOpen((curr) => !curr)} 
+                    className="md:hidden p-2 text-foreground cursor-pointer">
+                    {isMenuOpen ? <X /> : <Menu />}
                 </button>
             </nav>
-            <div className="md:hidden glass-strong"></div>
+
+            {isMenuOpen && (<div className="md:hidden glass-mobile">
+                <div className="container mx-auto px-6 py-6 flex flex-col gap-4 animation-menu-fade">
+                    {navLinks.map((link, index) => (
+                        <a key={index} href={link.href} className="text-lg text-muted-foreground hover:text-foreground py-2">
+                            {link.label}
+                        </a>
+                    ))}
+                    <Button size="sm">Contact Me</Button>
+                </div>
+            </div>)}
         </header>
     );
 };
