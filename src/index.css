@@ -54,7 +54,6 @@
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
 
-
   .glass-mobile {
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
@@ -62,13 +61,13 @@
   }
 
   .glow-text {
-    text-shadow: 0 0 30px color-mix(in srgb, var(--color-border) 90%, transparent);
+    text-shadow: 0 0 20px color-mix(in srgb, var(--color-border) 90%, transparent);
   }
 
   .glow-border {
-    box-shadow: 0 0 20px
-      color-mix(in srgb, var(--color-primary) 70%, transparent),
-      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+    box-shadow: 0 0 40px
+      color-mix(in srgb, var(--color-primary) 90%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--color-primary) 15%, transparent);
   }
 }
 
@@ -112,6 +111,22 @@
     }
     100% {
       stroke-dashoffset: -550;
+    }
+  }
+
+  @keyframes img-pulse {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(0, 10px);
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+    75% {
+      transform: translate(0, -10px);
     }
   }
 

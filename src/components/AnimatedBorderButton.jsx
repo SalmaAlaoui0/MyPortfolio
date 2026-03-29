@@ -33,7 +33,7 @@ export const AnimatedBorderButton =() => {
                     className="animated-border-path"
                 />
             </svg>
-            <span className="relative z-10 flex items-center justify-center gap-4 hover:animation-menu-fade">
+            <span className="relative z-10 flex items-center justify-center gap-4">
                 <Download className="w-5 h-5"/>
                 Download CV
             </span>
