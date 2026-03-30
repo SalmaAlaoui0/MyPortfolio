@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight } from "lucide-react"
+import { ArrowDown, ArrowRight, Download } from "lucide-react"
 import { Button } from "../components/Button"
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton"
 
@@ -21,7 +21,7 @@ export const Hero = () => {
                             HELLO, I AM
                         </p>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl animation-menu-fade animation-delay-100">Salma Alaoui</h1>
-                        <span className="text-5xl sm:text-6xl lg:text-7xl text-transparent bg-clip-text bg-linear-to-r from-violet-300 to-pink-300 animation-menu-fade animation-delay-200 hover:bg-linear-to-l from-violet-300 to-pink-300 glow-text">
+                        <span className="text-5xl sm:text-6xl lg:text-7xl text-transparent bg-clip-text bg-linear-to-r from-violet-300 to-pink-300 animation-menu-fade animation-delay-200 hover:bg-linear-to-l hover:from-violet-300 hover:to-pink-300 text-glow">
                             FullStack Developper
                         </span>
                         <p className="text-lg text-muted-foreground max-w-lg animation-menu-fade pt-3 leading-tight animation-delay-3z00">
@@ -34,7 +34,10 @@ export const Hero = () => {
                         <Button>
                             Contact Me <ArrowDown className="w-5 h-5"/>
                         </Button>
-                        <AnimatedBorderButton />
+                        <AnimatedBorderButton>
+                            <Download className="w-5 h-5"/>
+                            Download CV
+                        </AnimatedBorderButton>
                     </div>
                 </div>
                 <div className="relative animation-menu-fade animation-delay-400">

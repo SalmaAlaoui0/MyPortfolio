@@ -1,7 +1,8 @@
 
 
-export const Button = ({ className = "", size = "default", children, ...props}) => {
-    const baseClasses = "relative font-inria font-bold overflow-hidden rounded-full font-meduim focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-[#BB8ED0] text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/35 cursor-pointer";
+export const ButtonV2 = ({ className = "", size = "default", children, ...props}) => {
+    const baseClasses = "relative font-inria font-bold overflow-hidden rounded-full font-meduim focus:outline-none focus-visible:ring-2 focus-visible:ring-primary text-primary-foreground border-[#BB8ED0] border-2 shadow-lg shadow-primary/35 cursor-pointer"; 
+    // bg-[#BB8ED0] hover:bg-primary/90
     
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",
