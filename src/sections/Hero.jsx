@@ -42,7 +42,7 @@ export const Hero = () => {
                 </div>
                 <div className="relative animation-menu-fade animation-delay-400">
                     <div
-                        className="w-90 h-90 max-w-md mx-auto group [perspective:1000px]"
+                        className="w-70 h-70 md:w-90 md:h-90 max-w-md mx-auto group [perspective:1000px]"
                         style={{
                             animation: `img-pulse ${Math.random() * 3 + 3}s linear infinite`,
                         }}
