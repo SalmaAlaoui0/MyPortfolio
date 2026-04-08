@@ -48,13 +48,13 @@ export const About = () => {
     const pulseDuration = Math.random() * 3 + 3;
     return <section id="about" className="py-32 relative overflow-hidden">
         <div className="container mx-auto py-6 px-6 relative z-10">
+            <span className="text-[2.7rem] md:text-[3.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
+                About Me
+            </span>
             <div className="grid lg:grid-cols-2 gap-20 items-center">
                 {/* right side | About Me*/}
                 <div className='space-y-8'>
                     <div className="animation-menu-fade flex-row justify-center item-center">
-                        <span className="text-[3.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
-                            About Me
-                        </span>
                     </div>
                     <div className="text-muted-foreground animation-menu-fade animation-delay-200">
                         <div className='flex flex-row'>
@@ -68,11 +68,20 @@ export const About = () => {
                             and a passion for building reliable, efficient
                             systems. Experienced in backend development,
                             Linux environments, and containerized applications.
+                            Software engineering student at 1337 Coding
+                            School with strong problem-solving skills
+                            and a passion for building reliable, efficient
+                            systems. Experienced in backend development,
+                            Linux environments, and containerized applications.
+                            Software engineering student at 1337 Coding
+                            School with strong problem-solving skills
+                            and a passion for building reliable, efficient
+                            systems. Experienced in backend development.
                         </div>
                     </div>
-                    <div className="glass rounded-2xl p-6 animation-menu-fade animation-delay-300 mt-10 transition-all duration-400 hover:-translate-y-2">
+                    <div className="glass rounded-2xl p-6 animation-menu-fade animation-delay-300 mt-10 border vision-border">
                         <p className="text[1rem] md:text-lg font-medium italic text-foreground">
-                            "Open to work with collaborative teams and contribute to meaningful, user-focused products"
+                            "Open to work with collaborative teams and contribute to meaningful, user-focused products to make Great ideas come to Life"
                         </p>
                     </div>
                 </div>
@@ -109,7 +118,7 @@ export const About = () => {
                             <h2 className="font-bold flex text-[1.4rem] md:text-[2rem] justify-center">Soft Skills</h2>
                             <div className="grid sm:grid-cols-2 gap-4 md:gap-15 mx-7 my-5 md:my-10">
                                 {SoftSkills.map((item, idx) => (
-                                    <div key={idx} className="text-sm md:text-[1.33rem] glass border hover:border-primary/90 transition-all duration-400 hover:-translate-y-2 p-5 flex justify-center items-center rounded-2xl">
+                                    <div key={idx} className="text-sm md:text-[1.33rem] text-muted-foreground hover:text-white glass border hover:border-primary/90 transition-all duration-400 hover:-translate-y-2 p-5 flex justify-center items-center rounded-2xl">
                                         {item.Skill}
                                     </div>
                                 ))}
