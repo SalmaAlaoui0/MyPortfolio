@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
 import { X } from "lucide-react"
+import { AnimatedNoBorder } from "../components/AnimatedNoBorder"
+
 
 const projects = [
     {
@@ -49,12 +51,12 @@ export const Projects = () => {
         <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" /> */}
         <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mx-auto mb-16 animation-menu-fade">
-                <span className="text-[2.7rem] md:text-[3.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
+                <span className="text-[1.7rem] md:text-[2.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
                     Projects
                 </span>
                 <p className="text-muted-foreground animate-menu-fade animation-delay-20">
-                    A selection of my recent work, ranging from academic projects focused on low-level concepts to
-                    advanced full-stack & personal projects utilizing modern tools and technologies.
+                    Some of my recent work, ranging from academic projects focused on low-level concepts to
+                    full-stack & personal projects utilizing modern tools and technologies.
                 </p>
             </div>
             {/* Projects Grid */}
@@ -156,6 +158,18 @@ export const Projects = () => {
                     </div>
                 </div>
             )}
+            <div className="flex flex-cols mt-10 gap-2 text-muted-foreground items-center justify-center font-inria text-[1rem]">
+                <h1>Fell free to check out more of my projects on:</h1>
+                <a
+                    href={"https://github.com/SalmaAlaoui0"}
+                    target="_blank"
+                    className=""
+                >
+                    <AnimatedNoBorder>
+                        SalmaAlaoui0
+                    </AnimatedNoBorder>
+                </a>
+            </div>
         </div>
     </section>
 }

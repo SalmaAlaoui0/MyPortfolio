@@ -48,7 +48,7 @@ export const About = () => {
     const pulseDuration = Math.random() * 3 + 3;
     return <section id="about" className="py-32 relative overflow-hidden">
         <div className="container mx-auto py-6 px-6 relative z-10">
-            <span className="text-[2.7rem] md:text-[3.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
+            <span className="text-[1.7rem] md:text-[2.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
                 About Me
             </span>
             <div className="grid lg:grid-cols-2 gap-20 items-center">
