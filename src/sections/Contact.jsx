@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "../components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser"
@@ -52,11 +52,13 @@ export const Contact = () => {
                 );
             }
 
-            await emailjs.send(serviceId, templateId, {
+            const result = await emailjs.send(serviceId, templateId, {
                 name: formData.name,
                 email: formData.email,
                 message: formData.message,
             }, publicId)
+
+            console.log(result);
 
             setSubmitStatus({
                 type: "success",
@@ -151,10 +153,35 @@ export const Contact = () => {
                                 className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
                         </div>
                         <Button className="w-full" type="submit" disabled={isLoading}>
-                            
-                            Send Message
-                            <Send />
+                            {isLoading ? (
+                                <>
+                                    Sending ...
+                                </>
+                            ) : 
+                            (
+                                <>
+                                    Send Message
+                                    <Send className="w-5 h-5"/>
+                                </>
+                            )}
                         </Button>
+                        {submitStatus.type && (
+                            <div
+                            className={`flex items-center gap-3
+                                p-4 rounded-xl ${
+                                submitStatus.type === "success"
+                                    ? "bg-green-500/10 border border-green-500/20 text-green-400"
+                                    : "bg-red-500/10 border border-red-500/20 text-red-400"
+                                }`}
+                            >
+                            {submitStatus.type === "success" ? (
+                                <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                            ) : (
+                                <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                            )}
+                            <p className="text-sm">{submitStatus.message}</p>
+                            </div>
+                        )}
                     </form>
                 </div>
             </div>

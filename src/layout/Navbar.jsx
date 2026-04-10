@@ -3,10 +3,22 @@ import {Button} from "../components/Button";
 import { Menu , X} from "lucide-react"
 
 const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
+    {
+        href: "#about",
+        label: "About"
+    },
+    {
+        href: "#projects",
+        label: "Projects"
+    },
+    {
+        href: "#skills",
+        label: "Skills"
+    },
+    {
+        href: "#contact",
+        label: "Contact"
+    },
 ];
 
 export const Navbar = () => {
@@ -40,7 +52,9 @@ export const Navbar = () => {
                 </div>
 
                 <div className="hidden md:block">
-                    <Button size="sm">Get In Touch</Button>
+                    <a href={navLinks[3].href}>
+                        <Button size="sm">Get In Touch</Button>
+                    </a>
                 </div>
 
                 <button 
@@ -57,7 +71,9 @@ export const Navbar = () => {
                             {link.label}
                         </a>
                     ))}
-                    <Button onClick={() => {setIsMenuOpen(false)}}>Get In Touch</Button>
+                    <a href={navLinks[3].href}>
+                        <Button onClick={() => {setIsMenuOpen(false)}}>Get In Touch</Button>
+                    </a>
                 </div>
             </div>)}
         </header>
