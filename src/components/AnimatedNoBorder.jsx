@@ -29,7 +29,7 @@ export const AnimatedNoBorder =({children}) => {
                     strokeDashoffset="400"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="animated-border-path"
+                    className="animated-border-p"
                 />
             </svg>
             <span className="relative z-10 flex items-center justify-center gap-4">

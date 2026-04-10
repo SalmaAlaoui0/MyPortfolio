@@ -98,7 +98,7 @@ export const Contact = () => {
                         <div>
                             <label
                                 htmlFor="name"
-                                className="block text-sm font-medium mb-2"
+                                className="block text-sm font-medium font-inria mb-2"
                             >
                                 Name
                             </label>
@@ -119,7 +119,7 @@ export const Contact = () => {
                             <label
                                 htmlFor="email"
                                 type="email"
-                                className="block text-sm font-medium mb-2"
+                                className="block text-sm font-medium font-inria mb-2"
                             >
                                 Email
                             </label>
@@ -138,7 +138,7 @@ export const Contact = () => {
                         <div>
                             <label
                                 htmlFor="message"
-                                className="block text-sm font-medium mb-2"
+                                className="block text-sm font-medium font-inria mb-2"
                             >
                                 Message
                             </label>
@@ -183,6 +183,47 @@ export const Contact = () => {
                             </div>
                         )}
                     </form>
+                </div>
+
+                {/* The phone and email */}
+                <div className="space-y-6 animation-menu-fade animation-delay-400">
+                    <div className="glass rounded-3xl p-8">
+                        <h3 className="text-xl font-bold mb-6 alice">
+                            Contact Information
+                        </h3>
+                        <div className="space-y-4">
+                            {contactInfo.map((item, i) => (
+                                <a
+                                    key={i}
+                                    href="item.href"
+                                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                                >
+                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:primary/20 transition-colors">
+                                        <item.icon className="w-5 h-5 text-primary" />
+                                    </div>
+                                    <div>
+                                        <div className="text-sm text-muted-foreground">
+                                            {item.label}
+                                        </div>
+                                        <div className="font-medium font-inria">{item.value}</div>
+                                    </div>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Small Card */}
+                    <div className="glass rounded-3xl p-8 border border-primary/30">
+                        <div className="flex items-center gap-3 mb-4">
+                            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                            <span className="font-medium alice">Currently available</span>
+                        </div>
+                        <p className="text-muted-foreground text-sm">
+                            I'm currently open to new opportunities and exciting projects.
+                            Whether you need a full-time engineer or a freelance consultant,
+                            let's talk!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

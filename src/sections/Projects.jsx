@@ -2,43 +2,40 @@ import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
 import { X } from "lucide-react"
 import { AnimatedNoBorder } from "../components/AnimatedNoBorder"
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Button } from "../components/Button";
 
 const projects = [
     {
-        icon: "🌸",
-        date: "2024",
+        icon: "🏓",
         title: "ft_transcendence",
         description:
-            "Real-Time Full-Stack Web Application including authantication system and multiplayer Ping Pong game, real-time multiplayer communication plus Tournament System with matchmaking, player progression, and results management.",
+            "Real-Time Full-Stack Pong Application including authantication system and multiplayer Ping Pong game, real-time multiplayer communication plus Tournament System with matchmaking, player progression, and results management.",
         tags: ["Typescript", "NodeJS", "Fastify", "Socket.IO", "SQLite", "Docker", "Tailwind CSS"],
         github: "#",
     },
     {
-        icon: "🌸",
-        date: "2024",
-        title: "ft_transcendence",
+        icon: "🌐 HTTP",
+        title: "Webserv",
         description:
-            "Real-Time Full-Stack Web Application including authantication system and multiplayer Ping Pong game, real-time multiplayer communication plus Tournament System with matchmaking, player progression, and results management.",
-        tags: ["Typescript", "NodeJS", "Fastify", "Socket.IO", "SQLite", "Docker", "Tailwind CSS"],
+            "Wrote an HTTP/1.1 compliant web server in C++98 from scratch, handling non-blocking I/O and CGI.",
+        tags: ["c++", "Sockets"],
         github: "#",
     },
     {
-        icon: "🌸",
-        date: "2023",
-        title: "ft_transcendence",
+        icon: "🐳",
+        title: "Inception",
         description:
-            "Real-Time Full-Stack Web Application including authantication system and multiplayer Ping Pong game, real-time multiplayer communication plus Tournament System with matchmaking, player progression, and results management.",
-        tags: ["Typescript", "NodeJS", "Fastify", "Socket.IO", "SQLite", "Docker", "Tailwind CSS"],
+            "System Administration project setting up a Docker-based infrastructure with Nginx, WordPress, and MariaDB.",
+        tags: ["Docker", "Nginx", "WordPress", "MariaDB"],
         github: "#",
     },
     {
-        icon: "🌸",
-        date: "2023",
-        title: "ft_transcendence",
+        icon: "</>",
+        title: "Minishell",
         description:
-            "Real-Time Full-Stack Web Application including authantication system and multiplayer Ping Pong game, real-time multiplayer communication plus Tournament System with matchmaking, player progression, and results management.",
-        tags: ["Typescript", "NodeJS", "Fastify", "Socket.IO", "SQLite", "Docker", "Tailwind CSS"],
+            "Recreating a fully functional Unix shell (Bash) in C. Handled parsing, execution, pipes, and signals.",
+        tags: ["C", "Shell"],
         github: "#",
     },
 ];
@@ -57,6 +54,7 @@ export const Projects = () => {
                 <p className="text-muted-foreground animate-menu-fade animation-delay-20">
                     Some of my recent work, ranging from academic projects focused on low-level concepts to
                     full-stack & personal projects utilizing modern tools and technologies.
+                    <i className="fa-solid fa-table-tennis-paddle-ball"></i>
                 </p>
             </div>
             {/* Projects Grid */}
@@ -69,19 +67,18 @@ export const Projects = () => {
                         style={{animationDelay: `${(idx + 1) * 100}ms`}}
                     >
                         <div className="glass p-8 flex flex-col h-full relative overflow-hidden">
-                            <div className="absolute inset-0 bg-linear-to-r from-blue-500/0 to-cyan-500/0 group-hover:from-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-300"></div>
-                            <div className="relative z-10 flex-1 flex flex-col">
+                            <div className="absolute inset-0 bg-linear-to-r from-primary/0 to-cyan-500/0 group-hover:from-pink/10 group-hover:to-[#c06dcd]/10 transition-all duration-300"></div>
+                            <div className="relative z-10 flex-1 flex flex-col justify-between">
                                 <div className="flex items-start justify-between mb-4">
-                                    <span className="text-5xl">{project.icon}</span>
-                                    <span className="text-xs text-muted-foreground bg-white/10 px-3 py-1 rounded-full">{project.date}</span>
+                                    <span className="text-2xl">{project.icon}</span>
                                 </div>
-                                <h3 className="text-2xl font-bold mb-3 text-blue-400">{project.title}</h3>
-                                <p className="text-muted-foreground text-sm mb-6 flex-1">{project.description}</p>
+                                <h3 className="text-2xl font-bold mb-3 text-primary">{project.title}</h3>
+                                <p className="alice text-muted-foreground hover:text-foreground text-sm mb-6">{project.description}</p>
                                 <div className="flex flex-wrap gap-2 mb-6">
                                     {project.tags.map((tag, tagIdx) => (
                                         <span 
                                             key={tagIdx}
-                                            className="px-3 py-1 text-xs bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30 hover:border-blue-500 transition-colors"
+                                            className="px-3 py-1 text-xs bg-primary/20 hover:bg-primary/40 transition-colors text-primary rounded-full border border-primary/30 hover:border-primary/90 transition-colors"
                                         >
                                             {tag}
                                         </span>
@@ -119,12 +116,9 @@ export const Projects = () => {
                     <div className="flex items-center gap-4 mb-4">
                         <span className="text-4xl">{selectedProject.icon}</span>
                         <div>
-                        <h2 className="text-2xl font-bold text-blue-400">
+                        <h2 className="text-2xl font-bold text-primary">
                             {selectedProject.title}
                         </h2>
-                        <p className="text-sm text-muted-foreground">
-                            {selectedProject.date}
-                        </p>
                         </div>
                     </div>
 
@@ -132,7 +126,7 @@ export const Projects = () => {
                         {selectedProject.description}
                     </p>
 
-                    <h4 className="text-cyan-400 font-semibold mb-3">
+                    <h4 className="font-semibold mb-3">
                         Technologies utilisées
                     </h4>
 
@@ -140,7 +134,7 @@ export const Projects = () => {
                         {selectedProject.tags.map((tag, i) => (
                         <span
                             key={i}
-                            className="px-3 py-1 text-xs bg-blue-500/20 text-blue-300 rounded-full border border-blue-500/30"
+                            className="px-3 py-1 text-xs bg-primary/20 text-primary rounded-full border border-primary/30"
                         >
                             {tag}
                         </span>
@@ -148,18 +142,19 @@ export const Projects = () => {
                     </div>
 
                     {/* Button */}
-                    <a
+                    <Button
                         href={selectedProject.github}
                         target="_blank"
-                        className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-white font-medium"
+                        size="sm" md:size="default"
+                        className="text-[1rem] md:text-[1.4rem] transition-all duration-300"
                     >
                         Voir le code
-                    </a>
+                    </Button>
                     </div>
                 </div>
             )}
             <div className="flex flex-cols mt-10 gap-2 text-muted-foreground items-center justify-center font-inria text-[1rem]">
-                <h1>Fell free to check out more of my projects on:</h1>
+                <h1>Fell free to check out more of my work on:</h1>
                 <a
                     href={"https://github.com/SalmaAlaoui0"}
                     target="_blank"

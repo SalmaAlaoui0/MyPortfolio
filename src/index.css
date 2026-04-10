@@ -147,6 +147,19 @@
     }
   }
 
+  @keyframes borderMove {
+  0% {
+    stroke-dashoffset: 900;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated-border-p {
+  animation: borderMove 3s linear infinite;
+}
+
   .group:hover .animated-border-path {
     animation: animated-border 1.5s linear infinite;
   }
