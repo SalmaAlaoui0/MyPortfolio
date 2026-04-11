@@ -92,7 +92,7 @@ export const Contact = () => {
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
                 <div className="glass p-8 rounded-3xl border border-primary/30 animation-menu-fade animation-delay-300">
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
@@ -111,14 +111,13 @@ export const Contact = () => {
                                 onChange={(e) => {
                                     setFormData({ ...formData, name: e.target.value})
                                 }}
-                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/
-                            >
+                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            />
                         </div>
 
                         <div>
                             <label
                                 htmlFor="email"
-                                type="email"
                                 className="block text-sm font-medium font-inria mb-2"
                             >
                                 Email
@@ -132,8 +131,8 @@ export const Contact = () => {
                                 onChange={(e) => {
                                     setFormData({ ...formData, email: e.target.value})
                                 }}
-                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"/
-                            >
+                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                            />
                         </div>
 
                         <div>
@@ -151,7 +150,8 @@ export const Contact = () => {
                                     setFormData({ ...formData, message: e.target.value})
                                 }}
                                 placeholder="Your message ..."
-                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"/>
+                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                            />
                         </div>
                         <Button className="w-full" type="submit" disabled={isLoading}>
                             {isLoading ? (
