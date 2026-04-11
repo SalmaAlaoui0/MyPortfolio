@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Heart } from "lucide-react";
 
 const socialLinks = [
     {
@@ -50,8 +51,8 @@ export const Footer = () => {
                     <a href="#">
                         <img src="/Logo.svg" className='h-10 w-10'/>
                     </a>
-                    <p className="text-sm text-muted-foreground mt-2">
-                        © {currentYear} Salma Alaoui. All rights reserved.
+                    <p className="flex flex-cols gap-2 text-sm text-muted-foreground mt-2">
+                        © {currentYear} Salma Alaoui. Built with <Heart className="w-4 h-4 text-primary"/>
                     </p>
                 </div>
 

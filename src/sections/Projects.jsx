@@ -19,7 +19,7 @@ const projects = [
         title: "Webserv",
         description:
             "Wrote an HTTP/1.1 compliant web server in C++98 from scratch, handling non-blocking I/O and CGI.",
-        tags: ["c++", "Sockets"],
+        tags: ["C++", "Sockets"],
         github: "#",
     },
     {
@@ -127,7 +127,7 @@ export const Projects = () => {
                     </p>
 
                     <h4 className="font-semibold mb-3">
-                        Technologies utilisées
+                        Technologies used
                     </h4>
 
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -148,7 +148,7 @@ export const Projects = () => {
                         size="sm" md:size="default"
                         className="text-[1rem] md:text-[1.4rem] transition-all duration-300"
                     >
-                        Voir le code
+                        View the code
                     </Button>
                     </div>
                 </div>

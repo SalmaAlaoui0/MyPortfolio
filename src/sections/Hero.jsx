@@ -36,7 +36,13 @@ export const Hero = () => {
                         </Button>
                         <AnimatedBorderButton>
                             <Download className="w-5 h-5"/>
-                            Download CV
+                            <a
+                                href="https://drive.google.com/file/d/1KxfZHEJZsJsmj-k2c9eoYkXKFy0jV1cu/view?usp=drive_link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Download CV
+                            </a>
                         </AnimatedBorderButton>
                     </div>
                 </div>

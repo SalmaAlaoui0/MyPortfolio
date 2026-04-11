@@ -44,7 +44,7 @@ const Journey = [
 ]
 
 export const About = () => {
-    const[isStrenth, setIsStrenth] = useState(true);
+    const[isStrenth, setIsStrenth] = useState(false);
     const pulseDuration = Math.random() * 3 + 3;
     return <section id="about" className="py-32 relative overflow-hidden">
         <div className="container mx-auto py-6 px-6 relative z-10">
@@ -63,20 +63,10 @@ export const About = () => {
                             <h2 className='alice text-[#d0d0d0] text-[2.1em] mt-5'>LMA,</h2>
                         </div>
                         <div className="font-inria text-[1rem] md:text-[1.5em]">
-                            Software engineering student at 1337 Coding
-                            School with strong problem-solving skills
-                            and a passion for building reliable, efficient
-                            systems. Experienced in backend development,
-                            Linux environments, and containerized applications.
-                            Software engineering student at 1337 Coding
-                            School with strong problem-solving skills
-                            and a passion for building reliable, efficient
-                            systems. Experienced in backend development,
-                            Linux environments, and containerized applications.
-                            Software engineering student at 1337 Coding
-                            School with strong problem-solving skills
-                            and a passion for building reliable, efficient
-                            systems. Experienced in backend development.
+                            Software engineering student at 1337 Coding School with strong problem-solving skills and a passion for
+                            building reliable, efficient systems. Experienced in backend and frontend development, Linux environments, and
+                            containerized applications. I enjoy working in collaborative teams and I am eager to contribute to meaningful,
+                            user-focused products while continuing to learn from experienced engineers.
                         </div>
                     </div>
                     <div className="glass rounded-2xl p-6 animation-menu-fade animation-delay-300 mt-10 border vision-border">
@@ -95,35 +85,22 @@ export const About = () => {
                     >
                         <ButtonV2
                             size="sm" md:size="default"
-                            onClick={() => setIsStrenth(true)}
-                            className={`text-[1rem] md:text-[1.4rem] transition-all duration-300 ${
-                            isStrenth ? "bg-primary text-white" : "bg-transparent"}`}
-                        >
-                            My Strenth
-                        </ButtonV2>
-                        <ButtonV2
-                            size="sm" md:size="default"
                             onClick={() => setIsStrenth(false)}
                             className={`text-[1rem] md:text-[1.4rem] transition-all duration-300 ${
                             !isStrenth ? "bg-primary text-white" : "bg-transparent"}`}
                         >
                             My Journey
                         </ButtonV2>
+                        <ButtonV2
+                            size="sm" md:size="default"
+                            onClick={() => setIsStrenth(true)}
+                            className={`text-[1rem] md:text-[1.4rem] transition-all duration-300 ${
+                            isStrenth ? "bg-primary text-white" : "bg-transparent"}`}
+                        >
+                            My Strenth
+                        </ButtonV2>
                     </div>
                     <div className="glass vision-border p-5 rounded-3xl animation-menu-fade animation-delay-400">
-                        <div
-                            className={`font-inria text-[1.1rem] md:text-[1.3rem] transition-opacity duration-900 
-                            ${isStrenth ? "opacity-100 relative" : "opacity-0 absolute inset-0 pointer-events-none"}`}
-                        > {/*  this div is for Strenth  */}
-                            <h2 className="font-bold flex text-[1.4rem] md:text-[2rem] justify-center">Soft Skills</h2>
-                            <div className="grid sm:grid-cols-2 gap-4 md:gap-15 mx-7 my-5 md:my-10">
-                                {SoftSkills.map((item, idx) => (
-                                    <div key={idx} className="text-sm md:text-[1.33rem] text-muted-foreground hover:text-white glass border hover:border-primary/90 transition-all duration-400 hover:-translate-y-2 p-5 flex justify-center items-center rounded-2xl">
-                                        {item.Skill}
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                         <div
                             className={`transition-opacity duration-900 
                             ${!isStrenth ? "opacity-100 relative" : "opacity-0 absolute inset-0 pointer-events-none"}`}
@@ -147,6 +124,19 @@ export const About = () => {
                                                 <p className="text-[1.1rem] text-muted-foreground mt-4">{exp.SchoolName}</p>
                                             </div>
                                         </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div
+                            className={`font-inria text-[1.1rem] md:text-[1.3rem] transition-opacity duration-900 
+                            ${isStrenth ? "opacity-100 relative" : "opacity-0 absolute inset-0 pointer-events-none"}`}
+                        > {/*  this div is for Strenth  */}
+                            <h2 className="font-bold flex text-[1.4rem] md:text-[2rem] justify-center">Soft Skills</h2>
+                            <div className="grid sm:grid-cols-2 gap-4 md:gap-15 mx-7 my-5 md:my-10">
+                                {SoftSkills.map((item, idx) => (
+                                    <div key={idx} className="text-sm md:text-[1.33rem] text-muted-foreground hover:text-white glass border hover:border-primary/90 transition-all duration-400 hover:-translate-y-2 p-5 flex justify-center items-center rounded-2xl">
+                                        {item.Skill}
                                     </div>
                                 ))}
                             </div>

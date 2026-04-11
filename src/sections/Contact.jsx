@@ -92,7 +92,7 @@ export const Contact = () => {
                 </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                 <div className="glass p-8 rounded-3xl border border-primary/30 animation-menu-fade animation-delay-300">
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
@@ -125,6 +125,7 @@ export const Contact = () => {
                             </label>
                             <input
                                 id="email"
+                                type="email"
                                 required
                                 placeholder="your@email.com"
                                 value={formData.email}
