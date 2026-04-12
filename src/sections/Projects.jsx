@@ -51,10 +51,9 @@ export const Projects = () => {
                 <span className="text-[1.7rem] md:text-[2.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
                     Projects
                 </span>
-                <p className="text-muted-foreground animate-menu-fade animation-delay-20">
+                <p className="text-muted-foreground animate-menu-fade animation-delay-200">
                     Some of my recent work, ranging from academic projects focused on low-level concepts to
                     full-stack & personal projects utilizing modern tools and technologies.
-                    <i className="fa-solid fa-table-tennis-paddle-ball"></i>
                 </p>
             </div>
             {/* Projects Grid */}
@@ -63,7 +62,7 @@ export const Projects = () => {
                     <div
                         key={idx}
                         onClick={() => setSelectedProject(project)}
-                        className="group cursor-pointer glass rounded-2xl overflow-hidden animation-menu-fade md:row-span-1"
+                        className="group cursor-pointer glass rounded-2xl overflow-hidden animation-menu-fade animation-delay-400 md:row-span-1 transition-all duration-400 hover:-translate-y-2"
                         style={{animationDelay: `${(idx + 1) * 100}ms`}}
                     >
                         <div className="glass p-8 flex flex-col h-full relative overflow-hidden">
