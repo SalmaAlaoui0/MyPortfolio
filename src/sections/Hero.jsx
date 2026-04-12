@@ -31,9 +31,11 @@ export const Hero = () => {
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-6 animation-menu-fade animation-delay-400">
-                        <Button>
-                            Contact Me <ArrowDown className="w-5 h-5"/>
-                        </Button>
+                        <a href='#contact'>
+                            <Button>
+                                Contact Me <ArrowDown className="w-5 h-5"/>
+                            </Button>
+                        </a>
                         <AnimatedBorderButton>
                             <Download className="w-5 h-5"/>
                             <a

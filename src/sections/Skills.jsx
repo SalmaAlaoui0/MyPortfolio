@@ -6,7 +6,7 @@ export const Skills = () => {
         <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mx-auto mb-16 animation-menu-fade">
                 <span className="text-[1.7rem] md:text-[2.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
-                    Skills
+                    Skills & Technologies
                 </span>
                 <div className='w-24 bg-[#8245ec] mx-auto mt-2'>
                 </div>
@@ -36,7 +36,7 @@ export const Skills = () => {
                                 {category.skills.map((skill) => (
                                     <div
                                         key={skill.name}
-                                        className='flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 rounded-3xl py-2 px-2 text-center'
+                                        className='flex items-center justify-center space-x-2 bg-transparent rounded-full border border-primary/30 hover:border-primary/90 transition-colors py-2 px-2 text-center'
                                     >
                                         <img
                                             src={skill.logo}

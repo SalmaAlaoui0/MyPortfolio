@@ -30,8 +30,8 @@ const footerLinks = [
         label: "Projects",
     },
     {
-        href: "#experience",
-        label: "Experience",
+        href: "#skills",
+        label: "Skills"
     },
     {
         href: "#contact",
