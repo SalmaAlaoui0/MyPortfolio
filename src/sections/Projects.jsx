@@ -11,32 +11,40 @@ const projects = [
         title: "ft_transcendence",
         description:
             "Real-Time Full-Stack Pong Application including authantication system and multiplayer Ping Pong game, real-time multiplayer communication plus Tournament System with matchmaking, player progression, and results management.",
+        descrip:
+            "Developed a full-stack real-time web application in a team, featuring multiplayer game functionality, authentication, chat system, and user management, using modern web technologies and WebSockets for real-time communication, state synchronization, and interactive user experience, with scalable architecture and collaborative development workflow.",
         tags: ["Typescript", "NodeJS", "Fastify", "Socket.IO", "SQLite", "Docker", "Tailwind CSS"],
-        github: "#",
+        github: "https://github.com/fateemaazaahraae/ft_transcendence-42",
     },
     {
         icon: "🌐 HTTP",
         title: "Webserv",
         description:
             "Wrote an HTTP/1.1 compliant web server in C++98 from scratch, handling non-blocking I/O and CGI.",
+        descrip:
+            "Developed an HTTP/1.1-compliant web server in C++98, handling non-blocking I/O, request parsing, and CGI execution, with support for multiple client connections, basic routing, and robust error handling.",
         tags: ["C++", "Sockets"],
-        github: "#",
+        github: "https://github.com/SalmaAlaoui0/webserv",
     },
     {
         icon: "🐳",
         title: "Inception",
         description:
             "System Administration project setting up a Docker-based infrastructure with Nginx, WordPress, and MariaDB.",
+        descrip:
+            "Designed and deployed a containerized web infrastructure using Docker, orchestrating multiple services (NGINX, WordPress, MariaDB) with custom networks and volumes, ensuring secure communication, service isolation, reliable data persistence, and automated service startup and management.",
         tags: ["Docker", "Nginx", "WordPress", "MariaDB"],
-        github: "#",
+        github: "https://github.com/SalmaAlaoui0/inception",
     },
     {
         icon: "</>",
         title: "Minishell",
         description:
             "Recreating a fully functional Unix shell (Bash) in C. Handled parsing, execution, pipes, and signals.",
+        descrip:
+            "Developed a Unix-like shell in C, implementing command parsing, environment variable management, pipes, and redirections, along with process control and signal handling to replicate core bash behavior.",
         tags: ["C", "Shell"],
-        github: "#",
+        github: "https://github.com/SalmaAlaoui0/minishell",
     },
 ];
 
@@ -122,7 +130,7 @@ export const Projects = () => {
                     </div>
 
                     <p className="text-muted-foreground mb-6">
-                        {selectedProject.description}
+                        {selectedProject.descrip}
                     </p>
 
                     <h4 className="font-semibold mb-3">
@@ -141,13 +149,17 @@ export const Projects = () => {
                     </div>
 
                     {/* Button */}
-                    <Button
-                        href={selectedProject.github}
-                        target="_blank"
-                        size="sm" md:size="default"
+                    <Button asChild 
+                        size="sm"
                         className="text-[1rem] md:text-[1.4rem] transition-all duration-300"
                     >
-                        View the code
+                        <a
+                            href={selectedProject.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View the code
+                        </a>
                     </Button>
                     </div>
                 </div>

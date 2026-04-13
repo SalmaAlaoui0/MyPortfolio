@@ -1,26 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ButtonV2 } from "../components/ButtonV2"
 
 const SoftSkills = [
     {
-        Skill: "Strong debugging & analytical skills",
+        Skill: "Strong debugging and analytical thinking",
     },
     {
-        Skill: "Fast learner and highly adaptable",
+        Skill: "Fast learner with high adaptability",
     },
     {
-        Skill: "Team‑oriented with strong communication",
+        Skill: "Team-oriented with strong communication skills",
     },
     {
-        Skill: "Resilient and disciplined",
+        Skill: "Resilient, disciplined, and consistent under pressure",
     },
     {
-        Skill: "Team‑oriented with strong communication",
+        Skill: "Problem-solving mindset",
     },
     {
-        Skill: "Resilient and disciplined",
+        Skill: "Highly motivated, passionate, and hardworking",
     },
-]
+];
 
 const Journey = [
     {
@@ -46,6 +46,17 @@ const Journey = [
 export const About = () => {
     const[isStrenth, setIsStrenth] = useState(false);
     const pulseDuration = Math.random() * 3 + 3;
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
+
+    const skills = [
+        { name: "Arabic", level: 98 },
+        { name: "English", level: 78 },
+        { name: "French", level: 67 },
+    ];
     return <section id="about" className="py-32 relative overflow-hidden">
         <div className="container mx-auto py-6 px-6 relative z-10">
             <span className="text-[1.7rem] md:text-[2.5rem] font-inria text-transparent bg-clip-text bg-linear-to-r from-pink-300 to-[#c06dcd] hover:bg-linear-to-r hover:from-[#c06dcd] hover:to-pink-300 font-medium tracking-wider text-glow">
@@ -65,10 +76,31 @@ export const About = () => {
                         <div className="font-inria text-[1rem] md:text-[1.5em]">
                             Software engineering student at 1337 Coding School with strong problem-solving skills and a passion for
                             building reliable, efficient systems. Experienced in backend and frontend development, Linux environments, and
-                            containerized applications. I enjoy working in collaborative teams and I am eager to contribute to meaningful,
-                            user-focused products while continuing to learn from experienced engineers.
+                            containerized applications. I enjoy working in collaborative teams and contribute to meaningful,
+                            user-focused projects.
                         </div>
                     </div>
+                     <div className="text-muted-foreground animation-menu-fade animation-delay-200">
+                        <h3 className="text-white font-inria text-[2em] mt-5">I can Speak:</h3>
+
+                        <div className="space-y-4 mt-4 alice">
+                            {skills.map((skill) => (
+                            <div key={skill.name}>
+                                <p className="mb-1">{skill.name}</p>
+                                {/* Background bar */}
+                                <div className="w-full h-3 bg-gray-700/30 rounded-full overflow-hidden">
+                                    {/* Animated fill */}
+                                    <div
+                                        className="h-full bg-primary/50 hover:bg-primary rounded-full transition-all duration-1000 ease-out"
+                                        style={{
+                                        width: loaded ? `${skill.level}%` : "0%",
+                                        }}
+                                    />
+                                </div>
+                            </div>
+                            ))}
+                        </div>
+                        </div>
                     <div className="glass rounded-2xl p-6 animation-menu-fade animation-delay-300 mt-10 border vision-border">
                         <p className="text[1rem] md:text-lg font-medium italic text-foreground">
                             "Open to work with collaborative teams and contribute to meaningful, user-focused products to make Great ideas come to Life"
@@ -135,7 +167,7 @@ export const About = () => {
                             <h2 className="font-bold flex text-[1.4rem] md:text-[2rem] justify-center">Soft Skills</h2>
                             <div className="grid sm:grid-cols-2 gap-4 md:gap-15 mx-7 my-5 md:my-10">
                                 {SoftSkills.map((item, idx) => (
-                                    <div key={idx} className="text-sm md:text-[1.33rem] text-muted-foreground hover:text-white glass border hover:border-primary/90 transition-all duration-400 hover:-translate-y-2 p-5 flex justify-center items-center rounded-2xl">
+                                    <div key={idx} className="text-sm md:text-[1.22rem] text-muted-foreground hover:text-white glass border hover:border-primary/90 transition-all duration-400 hover:-translate-y-2 p-5 flex justify-center items-center rounded-2xl">
                                         {item.Skill}
                                     </div>
                                 ))}

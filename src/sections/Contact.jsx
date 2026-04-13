@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-reac
 import { Button } from "../components/Button";
 import { useState } from "react";
 import emailjs from "@emailjs/browser"
+import toast from "react-hot-toast";
 
 const contactInfo = [
     {
@@ -74,6 +75,16 @@ export const Contact = () => {
         } finally {
             setIsLoading(false)
         }
+    };
+    const [copiedIndex, setCopiedIndex] = useState(null);
+
+    const handleCopy = (value, index) => {
+        navigator.clipboard.writeText(value);
+        setCopiedIndex(index);
+
+        toast.success("Copied to clipboard!");
+
+        setTimeout(() => setCopiedIndex(null), 1500);
     };
     return <section id="contact" className="py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
@@ -194,21 +205,23 @@ export const Contact = () => {
                         </h3>
                         <div className="space-y-4">
                             {contactInfo.map((item, i) => (
-                                <a
+                                <div
                                     key={i}
-                                    href="item.href"
-                                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                                    onClick={() => handleCopy(item.value, i)}
+                                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group cursor-pointer"
                                 >
-                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:primary/20 transition-colors">
+                                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                                         <item.icon className="w-5 h-5 text-primary" />
                                     </div>
                                     <div>
                                         <div className="text-sm text-muted-foreground">
                                             {item.label}
                                         </div>
-                                        <div className="font-medium font-inria">{item.value}</div>
+                                        <div className="font-medium font-inria">
+                                            {copiedIndex === i ? "Copied!" : item.value}
+                                        </div>
                                     </div>
-                                </a>
+                                </div>
                             ))}
                         </div>
                     </div>

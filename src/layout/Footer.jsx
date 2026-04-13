@@ -5,17 +5,17 @@ import { Heart } from "lucide-react";
 const socialLinks = [
     {
         icon: FaGithub,
-        href: "#",
+        href: "https://github.com/SalmaAlaoui0",
         label: "Github",
     },
     {
         icon: FaLinkedin,
-        href: "#",
+        href: "https://www.linkedin.com/in/salma-alaoui-b14b46262/",
         label: "LinkedIn",
     },
     {
         icon: MdEmail,
-        href: "#",
+        href: "mailto:salmaalaoui739@gmail.com",
         label: "Email",
     },
 ];
@@ -78,6 +78,7 @@ export const Footer = () => {
                             <a
                             key={social.label}
                             href={social.href}
+                            target="_blank"
                             aria-label={social.label}
                             className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
                             >
