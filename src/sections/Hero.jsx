@@ -18,7 +18,7 @@ export const Hero = () => {
                     {/* headlines */}
                     <div className="font-inria space-y-4">
                         <p className="text-primary text-1xl animation-menu-fade">
-                            Aslamo Wa 3alaykom, I AM
+                            Aslamo 3alaykom, I AM
                         </p>
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl animation-menu-fade animation-delay-100">Salma Alaoui</h1>
                         <span className="text-5xl sm:text-6xl lg:text-7xl text-transparent bg-clip-text bg-linear-to-r from-violet-300 to-pink-300 animation-menu-fade animation-delay-200 hover:bg-linear-to-l hover:from-violet-300 hover:to-pink-300 text-glow">
@@ -70,7 +70,7 @@ export const Hero = () => {
 
                                 {/* Personal pic */}
                                 <img
-                                src="/profileImg2.png"
+                                src="/gitpinkpic.png"
                                 alt="Salma Alaoui"
                                 className="absolute w-full h-full object-cover rounded-full [transform:rotateY(180deg)] [backface-visibility:hidden]"
                                 />
