@@ -39,7 +39,7 @@ export const Hero = () => {
                         <AnimatedBorderButton>
                             <Download className="w-5 h-5"/>
                             <a
-                                href="https://drive.google.com/file/d/1hjFCnHpnNXAMlp9JylnszrmX4Oz8zuwM/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1PneoUYz4dgtbla99hzhklPgCxwmLoXAn/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -70,7 +70,7 @@ export const Hero = () => {
 
                                 {/* Personal pic */}
                                 <img
-                                src="/gitpinkpic.png"
+                                src="/Hijabi-woman-coding.png"
                                 alt="Salma Alaoui"
                                 className="absolute w-full h-full object-cover rounded-full [transform:rotateY(180deg)] [backface-visibility:hidden]"
                                 />
