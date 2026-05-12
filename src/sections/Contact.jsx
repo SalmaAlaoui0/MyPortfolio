@@ -205,9 +205,12 @@ export const Contact = () => {
                         </h3>
                         <div className="space-y-4">
                             {contactInfo.map((item, i) => (
-                                <div
+                                <a
                                     key={i}
                                     onClick={() => handleCopy(item.value, i)}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group cursor-pointer"
                                 >
                                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -221,7 +224,7 @@ export const Contact = () => {
                                             {copiedIndex === i ? "Copied!" : item.value}
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             ))}
                         </div>
                     </div>
