@@ -37,14 +37,14 @@ const projects = [
         github: "https://github.com/SalmaAlaoui0/inception",
     },
     {
-        icon: "</>",
-        title: "Minishell",
+        icon: "✨",
+        title: "NEMO",
         description:
-            "Recreating a fully functional Unix shell (Bash) in C. Handled parsing, execution, pipes, and signals.",
+            "MVP application that solves digital-passivity problems in kids btw 5 and 11",
         descrip:
-            "Developed a Unix-like shell in C, implementing command parsing, environment variable management, pipes, and redirections, along with process control and signal handling to replicate core bash behavior.",
-        tags: ["C", "Shell"],
-        github: "https://github.com/SalmaAlaoui0/minishell",
+            "The main idea of NEMO is to provide a safe and engaging platform for children to explore and learn through interactive activities, aiming to develop their critical thinking skills and increase attachment with real world by challenges, critical questions, and interactive learning experiences",
+        tags: ["Flutter", "Node.js", "PostgreSQL"],
+        github: "https://github.com/SalmaAlaoui0/no_repo_yet",
     },
 ];
 
