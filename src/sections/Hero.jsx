@@ -39,7 +39,7 @@ export const Hero = () => {
                         <AnimatedBorderButton>
                             <Download className="w-5 h-5"/>
                             <a
-                                href="https://drive.google.com/file/d/1PneoUYz4dgtbla99hzhklPgCxwmLoXAn/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1G3IM2LFRrreeMKMa84-FzjzRnXC5I6KZ/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
