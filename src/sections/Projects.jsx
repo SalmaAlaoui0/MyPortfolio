@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useState } from "react";
 import { X } from "lucide-react"
 import { AnimatedNoBorder } from "../components/AnimatedNoBorder"
@@ -174,6 +174,18 @@ export const Projects = () => {
                     <AnimatedNoBorder>
                         SalmaAlaoui0
                     </AnimatedNoBorder>
+                </a>
+            </div>
+            <div className="flex flex-cols mt-5 gap-4 text-muted-foreground items-center justify-center font-inria text-[1.1rem]">
+                <h1>And my latest live project: </h1>
+                <a
+                    href={"https://ikhtibar-hifd.vercel.app/"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-primary text-[1.1rem] font-medium hover:text-[#c06dcd] transition-all duration-300"
+                >
+                    <span>Ikhtibar Hifd</span>
+                    <FaExternalLinkAlt className="text-[0.85rem] opacity-0 -translate-x-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0" aria-hidden="true" />
                 </a>
             </div>
         </div>
